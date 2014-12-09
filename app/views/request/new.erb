@@ -1,5 +1,11 @@
 <form action="/request/new" method="POST">
   <%= display_error %>
+  <label>What phase are you in?</label>
+  <select name="request[phase]">
+    <option value = "1">1</option>
+    <option value = "2">2</option>
+    <option value = "3">3</option>
+ </select>
   <label>I need help with:
     <input type="text" name="request[title]" /><br>
   </label>
@@ -9,5 +15,5 @@
   <label>What do you think is happening?:
     <textarea type="text" name="request[tried_desc]" placeholder="Can you guess what might be happening with your code that is giving you a problem?"></textarea><br>
   </label>
-  <button type="submit" value="Submit">Need you coach!</button>
+  <button type="submit" class="button default" value="Submit">Need you coach!</button>
 </form>
