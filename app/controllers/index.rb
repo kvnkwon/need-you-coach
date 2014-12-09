@@ -1,4 +1,8 @@
 get '/' do
-  # Look in app/views/index.erb
+  @requests = Request.all
   erb :index
+end
+
+get '/success' do
+  erb :success
 end
