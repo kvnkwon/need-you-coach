@@ -20,6 +20,8 @@ gem 'shotgun'
 
 gem 'bcrypt'
 
+gem "octokit", "~> 3.0"
+
 group :test do
   gem 'faker'
   gem 'rspec'
