@@ -4,6 +4,6 @@ $(document).ready(function () {
     window.setTimeout(function(){
       alert("within the timeout function")
     window.location.href='/';
-    , 3000);
+    }, 3000);
   })
 });
