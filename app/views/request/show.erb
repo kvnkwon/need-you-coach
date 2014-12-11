@@ -1,5 +1,5 @@
 <h2><%= @user_request.user.name %> needs help with: <%= @user_request.title %></h2>
-<% if @user_request.url %>
+<% if @user_request.url != nil %>
   <p>Challenge URL:<br> <a href="<%= @user_request.url %>"><%= @user_request.url %></a></p>
 <% end %>
 <p>What I think is happening:<br> <%= @user_request.problem_desc %></p>
