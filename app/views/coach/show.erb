@@ -1,0 +1,7 @@
+<% if @coaches %>
+  <% @coaches.each do |coach| %>
+    Coach <%= coach.name %><br>
+  <% end %>
+<% else %>
+  <h2>No coaches are available. Sorry!<h2>
+<% end %>
