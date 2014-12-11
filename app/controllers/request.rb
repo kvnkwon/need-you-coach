@@ -1,3 +1,14 @@
+# View a help request
+
+get '/request/:id' do
+  @request = Request.find_by(id: params[:id])
+  if @request
+    erb :'request/show'
+  else
+    redirect('/')
+  end
+end
+
 # Make a new help request
 get '/request/new' do
   if current_user
@@ -17,13 +28,4 @@ post '/request/new' do
   end
 end
 
-# View a help request
 
-get '/request/:id' do
-  @request = Request.find_by(id: params[:id])
-  if @request
-    erb :'request/show'
-  else
-    redirect('/')
-  end
-end
