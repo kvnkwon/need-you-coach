@@ -16,3 +16,14 @@ post '/request/new' do
     redirect('/request/new')
   end
 end
+
+# View a help request
+
+get '/request/:id' do
+  @request = Request.find_by(id: params[:id])
+  if @request
+    erb :'request/show'
+  else
+    redirect('/')
+  end
+end
