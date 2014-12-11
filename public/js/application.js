@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".success-prompt").on("load", function(){
+  $(".success-prompt").load(function(){
     window.setTimeout(function(){
       alert("within the timeout function")
     window.location.href='/';
