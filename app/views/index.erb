@@ -1,5 +1,5 @@
 <h2>Help Requests</h2>
 <% @user_requests.each do |request| %>
-  <a href="/request/<%= request.id %>"><%= request.title %></a><br>
+  <%= request.user.name %> - <a href="/request/<%= request.id %>"><%= request.title %></a><br>
 <% end %>
 <a href="/request/new">Create a Help Request</a>

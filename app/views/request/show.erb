@@ -1,4 +1,5 @@
 <h2><%= @user_request.user.name %> needs help with: <%= @user_request.title %></h2>
+<p>Phase: <%= @user_request.phase %></p>
 <% if @user_request.url? %>
   <p>Challenge URL:<br> <a href="<%= @user_request.url %>"><%= @user_request.url %></a></p>
 <% end %>
