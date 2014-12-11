@@ -1,0 +1,8 @@
+<img src="<%= @user.avatar_url %>">
+<h2><%= @user.name %><h2>
+<%= @user.email %>
+
+<% if @user.is_admin? %>
+  <p>I'm a Coach!</p>
+<% end %>
+

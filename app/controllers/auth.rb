@@ -15,6 +15,12 @@ get '/auth/github/callback' do
   redirect('/')
 end
 
+# View user page
+get '/user/:id' do
+  @user = User.find_by(id: params[:id])
+  erb :'auth/show'
+end
+
 # Logout
 get '/logout' do
   session['user_id'] = nil
