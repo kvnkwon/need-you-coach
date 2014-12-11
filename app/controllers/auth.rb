@@ -23,6 +23,7 @@ end
 
 # Logout
 get '/logout' do
+  current_user.update(checked_in: false)
   session['user_id'] = nil
   redirect('/')
 end
