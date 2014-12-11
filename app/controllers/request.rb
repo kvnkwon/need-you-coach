@@ -26,3 +26,10 @@ get '/request/:id' do
     redirect('/')
   end
 end
+
+# Delete a help request
+delete '/request/:id' do
+  user_request = Request.find_by(id: params[:id])
+  user_request.destroy
+  redirect('/')
+end

@@ -5,4 +5,11 @@
 <% end %>
 <p>What I think is happening:<br> <%= @user_request.problem_desc %></p>
 <p>What I tried:<br> <%= @user_request.tried_desc %></p><br>
+<% if current_user == @user_request.user || current_user.is_admin? %>
+  <form action='/request/<%= @user_request.id %>' method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit" class="button alert" value="Submit">Close Help Request</button>
+  </form>
+<% end %>
+
 <a href="/">Back to Help Requests</a>
