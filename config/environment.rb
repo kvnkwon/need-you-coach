@@ -44,4 +44,7 @@ use OmniAuth::Builder do
   provider :github, "#{CLIENT_ID}", "#{CLIENT_SECRET}"
 end
 
-
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
