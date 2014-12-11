@@ -2,6 +2,7 @@
 
 get '/request/:id' do
   @request = Request.find_by(id: params[:id])
+  p @request
   if @request
     erb :'request/show'
   else
