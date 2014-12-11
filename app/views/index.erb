@@ -2,4 +2,5 @@
 <% @user_requests.each do |request| %>
   <a href="/user/<%= request.user.id %>"><%= request.user.name %></a> - <a href="/request/<%= request.id %>"><%= request.title %></a><br>
 <% end %>
+<a href="/coaches"><%= @coaches.count %> Coaches Available</a>
 <a href="/request/new">Create a Help Request</a>
