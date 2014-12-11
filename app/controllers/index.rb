@@ -1,5 +1,5 @@
 get '/' do
-  @requests = Request.all
+  @user_requests = Request.all
   erb :index
 end
 

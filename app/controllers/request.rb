@@ -1,9 +1,8 @@
 # View a help request
 
 get '/request/:id' do
-  @request = Request.find_by(id: params[:id])
-  p @request
-  if @request
+  @user_request = Request.find_by(id: params[:id])
+  if @user_request
     erb :'request/show'
   else
     redirect('/')
