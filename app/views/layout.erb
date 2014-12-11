@@ -27,6 +27,13 @@
   <title>Need You Coach</title>
 </head>
 <body>
+  <div id="login-bar">
+    <% if current_user %>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/login">Login</a> | <a href="/signup">Signup</a>
+    <% end %>
+  </div>
   <%= yield %>
 </body>
 </html>
