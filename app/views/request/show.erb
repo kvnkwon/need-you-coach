@@ -1,7 +1,7 @@
 <h2><a href="/user/<%= @user_request.user.id %>"><%= @user_request.user.name %></a> needs help with: <%= h @user_request.title %></h2>
 <p>Phase: <%= @user_request.phase %></p>
 <% if @user_request.url? %>
-  <p>Challenge URL:<br> <a href="<%= @user_request.url %>"><%= h @user_request.url %></a></p>
+  <p>Challenge URL:<br> <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
 <% end %>
 <p>What I think is happening:<br> <%= h @user_request.problem_desc %></p>
 <p>What I tried:<br> <%= h @user_request.tried_desc %></p><br>
