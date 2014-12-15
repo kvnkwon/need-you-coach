@@ -1,10 +1,14 @@
 <h2>Help Requests</h2>
 <% @user_requests.each do |request| %>
   <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
-  <form action="/request/<%= request.id %>" method="POST">
-    <input type="hidden" name="_method">
-    <input type="submit" class="link-button" value="Help" />
-  </form>
+  <% if request.coach_id.blank? %>
+    <form action="/request/<%= request.id %>" method="POST">
+      <input type="hidden" name="_method">
+      <input type="submit" class="link-button" value="Help" />
+    </form>
+  <% else %>
+    - Coach <%= request.coach.name %> is helping.
+  <% end %>
   <br>
 <% end %>
 <a href="/coaches">
