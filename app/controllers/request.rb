@@ -1,5 +1,4 @@
 # Make a new help request
-before '/request/'
 get '/request/new' do
   if current_user
     erb :'request/new'
