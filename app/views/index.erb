@@ -3,7 +3,7 @@
   <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
   <form action="/request/<%= request.id %>" method="POST">
     <input type="hidden" name="_method">
-    <button type="submit" class="link-button">Help</button>
+    <input type="submit" class="link-button">Help</button>
   </form>
   <br>
 <% end %>
