@@ -6,7 +6,7 @@
         Phase <%= request.phase %>: <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>" class="purple-txt"><%= h request.title[0..41] %>..</a>
       </div>
       <div class="large-4 columns <%= "gray-background" if index % 2 == 1 %>">
-        <% if request.coach_id.blank? %>
+        <% if request.coach_id.blank? && current_user.is_admin? %>
           <form action="/request/<%= request.id %>" method="POST">
             <input type="hidden" name="_method">
             <input type="submit" class="link-button" value="Help" />
