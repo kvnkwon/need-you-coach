@@ -3,7 +3,7 @@
   <div class="small-12 small-centered columns">
     <% @user_requests.each_with_index do |request, index| %>
       <div class="large-8 columns <%= "gray-background" if index % 2 == 1 %>">
-        <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
+        Phase <%= request.phase %>: <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
       </div>
       <div class="large-4 columns <%= "gray-background" if index % 2 == 1 %>">
         <% if request.coach_id.blank? %>
