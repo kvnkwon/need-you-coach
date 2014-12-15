@@ -1,11 +1,13 @@
 .link-button {
  background: none;
  border: none;
- color: #0066ff;
- text-decoration: underline;
- cursor: pointer;
+ color: #FD7300;
 }
 
-.gray-background{
+.gray-background {
   background-color: #FAFAFA;
+}
+
+.green-txt {
+  color: #27BE06
 }
