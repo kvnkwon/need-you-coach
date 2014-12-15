@@ -28,6 +28,16 @@ get '/request/:id' do
   end
 end
 
+# Coach mark a help request
+post '/request/:id' do
+  user_request = Request.find_by(id: params[:id])
+  if current_user.is_admin?
+    user_request.update(coach_id: current_user.id)
+  else
+    redirect('/')
+  end
+end
+
 # Delete a help request
 delete '/request/:id' do
   user_request = Request.find_by(id: params[:id])
