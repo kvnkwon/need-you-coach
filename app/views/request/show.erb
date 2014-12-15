@@ -1,4 +1,4 @@
-<h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.user.name %></a> needs help with: <%= h @user_request.title %></h2>
+<h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %></a> needs help with: <%= h @user_request.title %></h2>
 <p>Phase: <%= @user_request.phase %></p>
 <% if @user_request.url? %>
   <p>Challenge URL:<br> <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
