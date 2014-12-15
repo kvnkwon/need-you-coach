@@ -1,11 +1,11 @@
 <h2>Help Requests</h2>
 <div class="row">
   <div class="small-12 small-centered columns">
-    <% @user_requests.each do |request| %>
-      <div class="large-8 columns">
+    <% @user_requests.each_with_index do |request, index| %>
+      <div class="large-8 columns <%= "gray-background" if index % 2 == 1 %>">
         <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
       </div>
-      <div class="large-4 columns">
+      <div class="large-4 columns <%= "gray-background" if index % 2 == 1 %>">
         <% if request.coach_id.blank? %>
           <form action="/request/<%= request.id %>" method="POST">
             <input type="hidden" name="_method">
