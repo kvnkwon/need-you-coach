@@ -13,7 +13,7 @@
               <input type="submit" class="link-button" value="Help" />
             </form>
           <% elsif request.coach_id %>
-            - Coach <%= request.coach.name %> is helping.
+            - Coach <a href="/user/<%= request.coach_id %>"><%= request.coach.name %></a> is helping.
           <% end %>
         </div>
       </div>
