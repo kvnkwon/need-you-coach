@@ -8,7 +8,8 @@ get '/request/new' do
 end
 
 post '/request/new' do
-  user_request = current_user.requests.create(params[:request])
+  user_request = Request.create(params[:request])
+  user_request.update(student_id: current_user.id)
   if user_request.save
     redirect("/success")
   else

@@ -1,6 +1,6 @@
 <h2>Help Requests</h2>
 <% @user_requests.each do |request| %>
-  <a href="/user/<%= request.user.id %>"><%= request.user.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a><br>
+  <a href="/user/<%= request.student_id %>"><%= request.user.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a><br>
 <% end %>
 <a href="/coaches">
   <% if @coaches.count == 0 %>
