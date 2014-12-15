@@ -1,16 +1,22 @@
 <h2>Help Requests</h2>
-<% @user_requests.each do |request| %>
-  <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
-  <% if request.coach_id.blank? %>
-    <form action="/request/<%= request.id %>" method="POST">
-      <input type="hidden" name="_method">
-      <input type="submit" class="link-button" value="Help" />
-    </form>
-  <% else %>
-    - Coach <%= request.coach.name %> is helping.
-  <% end %>
-  <br>
-<% end %>
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <% @user_requests.each do |request| %>
+      <div class="row">
+        <a href="/user/<%= request.student_id %>"><%= request.student.name %></a> - <a href="/request/<%= request.id %>"><%= h request.title %></a>
+        <% if request.coach_id.blank? %>
+          <form action="/request/<%= request.id %>" method="POST">
+            <input type="hidden" name="_method">
+            <input type="submit" class="link-button" value="Help" />
+          </form>
+        <% else %>
+          - Coach <%= request.coach.name %> is helping.
+        <% end %>
+        <br>
+      </div>
+    <% end %>
+  </div>
+</div>
 <a href="/coaches">
   <% if @coaches.count == 0 %>
     No Coaches Available
