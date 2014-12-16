@@ -3,7 +3,7 @@
   <div class="row">
     <% @admins.each do |admin| %>
       <div class="small-8 columns">
-        <%= admin.name %><br>
+        <a href="/user/<%= admin.id %>"><%= admin.name %></a><br>
       </div>
       <div class="small-4 columns">
         <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
@@ -17,7 +17,7 @@
   <div class="row">
     <% @users.each do |user| %>
       <div class="small-8 columns">
-        <%= user.name %>
+        <a href="/user/<%= user.id %>"><%= user.name %></a><br>
       </div>
       <div class="small-4 columns">
         <form action="/user/<%= user.id %>/promote" method="POST" class="promote-form">
