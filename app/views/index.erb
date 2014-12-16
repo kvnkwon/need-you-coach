@@ -1,4 +1,8 @@
-<h2 class="text-center">Help Requests</h2>
+<h2 class="text-center">
+  <% if @help_needed_requests.count > 0 %>
+    <%= @help_needed_requests.count %> request(s) needing assistance.
+  <% end %>
+</h2>
 <div class="row">
   <div class="small-12 small-centered columns">
     <% @user_requests.each_with_index do |request, index| %>
@@ -20,16 +24,5 @@
     <% end %>
   </div>
 </div>
-<a href="/coaches">
-  <% if @coaches.count == 0 %>
-    No Coaches Available
-  <% elsif @coaches.count == 1 %>
-    <%= @coaches.count %> Coach Available
-  <% else %>
-    <%= @coaches.count %> Coaches Available
-  <% end %>
-</a><br>
-<% if @help_needed_requests.count > 0 %>
-  <%= @help_needed_requests.count %> request(s) needing assistance.<br>
-<% end %>
-<a href="/request/new">Create a Help Request</a>
+
+
