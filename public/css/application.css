@@ -16,3 +16,7 @@
 .purple-txt {
   color: #E300FD;
 }
+
+.admin-user-form {
+  display: inline-block;
+}

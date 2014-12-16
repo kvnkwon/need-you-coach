@@ -20,11 +20,11 @@
         <a href="/user/<%= user.id %>"><%= user.name %></a><br>
       </div>
       <div class="small-4 columns">
-        <form action="/user/<%= user.id %>/promote" method="POST" class="promote-form">
+        <form action="/user/<%= user.id %>/promote" method="POST" class="admin-user-form">
           <input type="hidden" name="_method">
           <input type="submit" class="link-button" value="Make Admin" />
         </form>
-        <form action="/user/<%= user.id %>" method="POST">
+        <form action="/user/<%= user.id %>" method="POST" class="admin-user-form">
           <input type="hidden" name="_method" value="DELETE">
           <input type="submit" class="link-button" value="Delete User" />
         </form>
