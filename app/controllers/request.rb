@@ -11,7 +11,7 @@ post '/request/new' do
   user_request = Request.create(params[:request])
   user_request.update(student_id: current_user.id)
   if user_request.save
-    redirect("/success")
+    redirect("/")
   else
     session[:error] = user_request.errors.messages
     redirect('/request/new')

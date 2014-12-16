@@ -6,7 +6,7 @@
         <%= admin.name %><br>
       </div>
       <div class="small-4 columns">
-        <form action="/user/<%= admin.id %>/revoke" method="POST">
+        <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
           <input type="hidden" name="_method">
           <input type="submit" class="link-button" value="Revoke Admin" />
         </form>
@@ -20,7 +20,7 @@
         <%= user.name %>
       </div>
       <div class="small-4 columns">
-        <form action="/user/<%= user.id %>/promote" method="POST">
+        <form action="/user/<%= user.id %>/promote" method="POST" class="promote-form">
           <input type="hidden" name="_method">
           <input type="submit" class="link-button" value="Make Admin" />
         </form>
