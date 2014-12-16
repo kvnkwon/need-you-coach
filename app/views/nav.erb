@@ -1,0 +1,39 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/" class="site-logo">NEEDYOUCOACH</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <% if current_user %>
+        <li><a href="/request/new">GET HELP</a></li>
+        <li><a href="/logout">LOGOUT</a></li>
+      <% else %>
+        <li><a href="/login">LOGIN</a></li>
+        <li><a href="/signup">SIGN UP</a></li>
+      <% end %>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <% if current_user %>
+        <li>
+          <a href="/coaches">
+            <% if @coaches.count == 0 %>
+              No Coaches Available
+            <% elsif @coaches.count == 1 %>
+              <%= @coaches.count %> Coach Available
+            <% else %>
+              <%= @coaches.count %> Coaches Available
+            <% end %>
+          </a><br>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
