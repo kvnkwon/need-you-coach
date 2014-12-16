@@ -14,7 +14,7 @@
             </form>
           <% elsif request.coach_id && current_user && current_user.is_admin? %>
             - Coach <a href="/user/<%= request.coach_id %>"><%= request.coach.name %></a> is helping.
-            <form action='/request/<%= @user_request.id %>' method="POST">
+            <form action='/request/<%= request.id %>' method="POST">
               <input type="hidden" name="_method" value="DELETE">
               <input type="submit" class="link-button" value="Close Request" />
             </form>
