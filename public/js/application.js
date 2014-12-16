@@ -9,7 +9,6 @@ $(document).ready(function() {
     }).done(function(response) {
       console.log(response)
       $target.html('- Coach <a href="/user/' + response.id + '">' + response.name + '</a> is helping.')
-      debugger;
     })
   })
 })
