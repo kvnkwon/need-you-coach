@@ -12,7 +12,7 @@
     <ul class="right">
       <% if current_user && current_user.is_admin? %>
         <li class="has-dropdown">
-          ADMIN
+          <a href="#">ADMIN</a>
           <ul class="dropdown">
             <li>
               <form action="/coach/check-in" method="POST">
