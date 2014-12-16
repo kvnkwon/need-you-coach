@@ -31,7 +31,7 @@
           <% end %>
         </a>
       </li>
-      <% if current_user.is_admin? %>
+      <% if current_user && current_user.is_admin? %>
         <li>
           <form action="/coach/check-in" method="POST">
             <input type="hidden" name="_method">
