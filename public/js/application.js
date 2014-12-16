@@ -20,6 +20,7 @@ $(document).ready(function() {
       url: $target.attr("action"),
     }).done(function(response) {
       console.log(response)
+    })
   });
 
 })
