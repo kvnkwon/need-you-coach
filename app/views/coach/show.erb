@@ -1,0 +1,18 @@
+<% unless @coaches.empty? %>
+  <% @coaches.each do |coach| %>
+    Coach <%= coach.name %><br>
+  <% end %>
+<% else %>
+  <h2>No coaches are available. Sorry!<h2>
+<% end %>
+
+<% if current_user %>
+  <% if current_user.is_admin? && current_user.checked_in == false %>
+    <form action="/coach/check-in" method="POST">
+      <input type="hidden" name="_method">
+      <button type="submit" class="button success">Check In!</button>
+    </form>
+  <% end %>
+<% end %>
+
+<a href="/">Back to Help Requests</a>

@@ -19,6 +19,11 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
+require 'omniauth'
+require 'omniauth-github'
+
+require 'dotenv'
+Dotenv.load
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -31,3 +36,15 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+CLIENT_ID = ENV["GH_ID"]
+CLIENT_SECRET = ENV['SECRET_KEY']
+
+use OmniAuth::Builder do
+  provider :github, "#{CLIENT_ID}", "#{CLIENT_SECRET}"
+end
+
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
