@@ -12,6 +12,9 @@ get '/auth/github/callback' do
     avatar_url: auth.info.image,
   })
   session[:user_id] = user['id']
+  if current_user.is_admin?
+    current_user.update(checked_in: true)
+  end
   redirect('/')
 end
 
