@@ -33,6 +33,7 @@ post '/request/:id' do
   user_request = Request.find_by(id: params[:id])
   if current_user.is_admin?
     user_request.update(coach_id: current_user.id)
+    user_request.to_json
   else
     redirect('/')
   end
