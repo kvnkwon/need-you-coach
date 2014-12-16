@@ -1,6 +1,8 @@
 <h2 class="text-center">
   <% if @help_needed_requests.count > 0 %>
     <%= @help_needed_requests.count %> request(s) needing assistance.
+  <% else %>
+    Need help? Create a <a href="/request/new">help request</a>!
   <% end %>
 </h2>
 <div class="row">
