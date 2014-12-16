@@ -13,6 +13,7 @@ end
 post '/user/:id' do
   user = User.find_by(id: params[:id])
   user.update(is_admin: true)
+  redirect('/admin')
 end
 
 
