@@ -20,6 +20,13 @@ gem 'shotgun'
 
 gem 'bcrypt'
 
+gem 'dotenv'
+
+gem 'omniauth'
+gem 'omniauth-github'
+
+gem "octokit", "~> 3.0"
+
 group :test do
   gem 'faker'
   gem 'rspec'
