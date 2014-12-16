@@ -2,7 +2,15 @@
   <h3>Admins:</h3>
   <div class="row">
     <% @admins.each do |admin| %>
-      <%= admin.name %><br>
+      <div class="small-8 columns">
+        <%= admin.name %><br>
+      </div>
+      <div class="small-4 columns">
+        <form action="/user/<%= user.id %>/revoke" method="POST">
+          <input type="hidden" name="_method">
+          <input type="submit" class="link-button" value="Revoke Admin" />
+        </form>
+      </div>
     <% end %>
   </div>
   <h3>Users:</h3>
@@ -12,7 +20,7 @@
         <%= user.name %>
       </div>
       <div class="small-4 columns">
-        <form action="/user/<%= user.id %>" method="POST">
+        <form action="/user/<%= user.id %>/promote" method="POST">
           <input type="hidden" name="_method">
           <input type="submit" class="link-button" value="Make Admin" />
         </form>

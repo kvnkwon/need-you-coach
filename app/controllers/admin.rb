@@ -10,12 +10,15 @@ get '/admin' do
 end
 
 # Add Admin
-post '/user/:id' do
+post '/user/:id/promote' do
   user = User.find_by(id: params[:id])
   user.update(is_admin: true)
   redirect('/admin')
 end
 
-
 # Revoke Admin
-
+post '/user/:id/revoke' do
+  user = User.find_by(id: params[:id])
+  user.update(is_admin: false)
+  redirect('/admin')
+end
