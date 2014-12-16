@@ -25,6 +25,13 @@ get '/user/:id' do
   erb :'auth/show'
 end
 
+# Delete a user
+delete '/user/:id' do
+  user = User.find_by(id: params[:id])
+  user.destroy
+  redirect('/admin')
+end
+
 # Logout
 get '/logout' do
   current_user.update(checked_in: false)

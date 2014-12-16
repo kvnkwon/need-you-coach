@@ -24,6 +24,10 @@
           <input type="hidden" name="_method">
           <input type="submit" class="link-button" value="Make Admin" />
         </form>
+        <form action="/user/<%= user.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" class="link-button" value="Delete User" />
+        </form>
       </div>
     <% end %>
   </div>
