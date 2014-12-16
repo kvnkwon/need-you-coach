@@ -9,6 +9,10 @@
   <% @users.each do |user| %>
     <p class="text-center">
       <%= user.name %>
+      <form action="/user/<%= user.id %>" method="POST">
+        <input type="hidden" name="_method">
+        <input type="submit" class="link-button" value="Make Admin" />
+      </form>
     </p>
   <% end %>
 </div>
