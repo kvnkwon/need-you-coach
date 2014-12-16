@@ -1,7 +1,7 @@
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="/" class="site-logo">HELP@DBC</a></h1>
+      <h1><a href="/" class="site-logo">DBC-COACHES</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -20,21 +20,25 @@
 
     <!-- Left Nav Section -->
     <ul class="left">
-      <% if current_user %>
+      <li>
+        <a href="/coaches">
+          <% if @coaches.count == 0 %>
+            NO COACHES AVAILABLE
+          <% elsif @coaches.count == 1 %>
+            <%= @coaches.count %> COACH AVAILABLE
+          <% else %>
+            <%= @coaches.count %> COACHES AVAILABLE
+          <% end %>
+        </a>
+      </li>
+      <% if current_user.is_admin? %>
         <li>
-          <a href="/coaches">
-            <% if @coaches.count == 0 %>
-              NO COACHES AVAILABLE
-            <% elsif @coaches.count == 1 %>
-              <%= @coaches.count %> COACH AVAILABLE
-            <% else %>
-              <%= @coaches.count %> COACHES AVAILABLE
-            <% end %>
-          </a>
+          <form action="/coach/check-in" method="POST">
+            <input type="hidden" name="_method">
+            <input type="submit" class="link-button" value="CHECK-IN" />
+          </form>
         </li>
-        <% if current_user.is_admin? %>
-          <li><a href="/admin">ADMIN</a></li>
-        <% end %>
+        <li><a href="/admin">ADMIN</a></li>
       <% end %>
     </ul>
   </section>
