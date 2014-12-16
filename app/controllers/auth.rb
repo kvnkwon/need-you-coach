@@ -17,6 +17,7 @@ end
 
 # View user page
 get '/user/:id' do
+  @coaches = User.where(checked_in: true)
   @user = User.find_by(id: params[:id])
   erb :'auth/show'
 end

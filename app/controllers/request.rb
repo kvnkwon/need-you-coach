@@ -1,5 +1,6 @@
 # Make a new help request
 get '/request/new' do
+  @coaches = User.where(checked_in: true)
   if current_user
     erb :'request/new'
   else
@@ -20,6 +21,7 @@ end
 
 # View a help request
 get '/request/:id' do
+  @coaches = User.where(checked_in: true)
   @user_request = Request.find_by(id: params[:id])
   if @user_request
     erb :'request/show'

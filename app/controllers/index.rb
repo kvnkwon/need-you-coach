@@ -4,7 +4,3 @@ get '/' do
   @coaches = User.where(checked_in: true)
   erb :index
 end
-
-get '/success' do
-  erb :success
-end
