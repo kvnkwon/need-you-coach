@@ -21,6 +21,17 @@ get '/user/:id' do
   erb :'auth/show'
 end
 
+# Admin panel
+get '/admin' do
+  if current_user.is_admin?
+    @admins = User.where(is_admin: true)
+    @users = User.where(is_admin: false)
+    erb :'admin/index'
+  else
+    redirect('/')
+  end
+end
+
 # Logout
 get '/logout' do
   current_user.update(checked_in: false)
