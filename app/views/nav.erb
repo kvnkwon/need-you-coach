@@ -10,6 +10,20 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
+      <% if current_user && current_user.is_admin? %>
+        <li class="has-dropdown">
+          ADMIN
+          <ul class="dropdown">
+            <li>
+              <form action="/coach/check-in" method="POST">
+                <input type="hidden" name="_method">
+                <input type="submit" class="link-button" value="CHECK-IN" />
+              </form>
+            </li>
+            <li><a href="/admin">CONTROL PANEL</a></li>
+          </ul>
+        </li>
+      <% end %>
       <% if current_user %>
         <li><a href="/request/new">GET HELP</a></li>
         <li><a href="/logout">LOGOUT</a></li>
@@ -31,15 +45,6 @@
           <% end %>
         </a>
       </li>
-      <% if current_user && current_user.is_admin? %>
-        <li>
-          <form action="/coach/check-in" method="POST">
-            <input type="hidden" name="_method">
-            <input type="submit" class="link-button" value="CHECK-IN" />
-          </form>
-        </li>
-        <li><a href="/admin">ADMIN</a></li>
-      <% end %>
     </ul>
   </section>
 </nav>

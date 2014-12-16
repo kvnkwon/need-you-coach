@@ -1,9 +1,14 @@
 .link-button {
- background: none;
- border: none;
- color: #FD7300;
+  background: none;
+  border: none;
+  color: #FD7300;
 }
 
+.nav-link-button {
+  background: none;
+  border: none;
+  color: #FD7300;
+}
 .gray-background {
   background-color: #FAFAFA;
 }
