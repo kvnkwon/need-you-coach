@@ -28,3 +28,12 @@
 .help-form {
   display: inline-block;
 }
+
+.coach-h2 {
+  margin-bottom: 1.2em;
+}
+
+.available-h2 {
+  margin-top: 2em;
+  margin-bottom: 1.2em;
+}

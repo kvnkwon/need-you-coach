@@ -1,5 +1,5 @@
 <div class="small-8 small-centered columns">
-  <h2 class="text-center">Who's Available?</h2>
+  <h2 class="text-center available-h2">Who's Available?</h2>
   <ul class="small-block-grid-3">
     <% unless @coaches.empty? %>
       <% @coaches.each do |coach| %>
@@ -9,7 +9,7 @@
     <% else %>
       <h2 class="text-center">No coaches are available. Sorry!<h2>
     <% end %>
-  <h2 class="text-center">All Coaches and Mentors</h2>
+  <h2 class="text-center coach-h2">All Coaches and Mentors</h2>
   <ul class="small-block-grid-3">
     <% @all_coaches.each do |coach| %>
       <li class="text-center"><img src="<%= coach.avatar_url %>" class="text-center" width=160 height=160><br><%= coach.name %></li>
