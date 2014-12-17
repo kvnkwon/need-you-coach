@@ -20,6 +20,7 @@ $(document).ready(function() {
       type: "PUT",
       url: $target.attr("action"),
     }).done(function(response) {
+      debugger;
       console.log(response)
       $target.html(response)
     })
