@@ -3,7 +3,7 @@
   <ul class="small-block-grid-3">
     <% unless @coaches.empty? %>
       <% @coaches.each do |coach| %>
-        <li class="text-center"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
+        <li class="text-center coach-port-container"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
       <% end %>
   </ul>
     <% else %>
@@ -12,7 +12,7 @@
   <h2 class="text-center coach-h2">All Coaches and Mentors</h2>
   <ul class="small-block-grid-3">
     <% @all_coaches.each do |coach| %>
-      <li class="text-center"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
+      <li class="text-center coach-port-container"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
     <% end %>
   </ul>
   <a href="/" class="text-center">Back to Help Requests</a>
