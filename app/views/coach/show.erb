@@ -3,6 +3,7 @@
   <ul class="small-block-grid-3">
     <% unless @coaches.empty? %>
       <% @coaches.each do |coach| %>
+        <img src="<%= coach.avatar_url %>" class="text-center">
         <li class="text-center"><%= coach.name %></li>
       <% end %>
   </ul>
@@ -12,6 +13,7 @@
   <h2 class="text-center">All Coaches and Mentors</h2>
   <ul class="small-block-grid-3">
     <% @all_coaches.each do |coach| %>
+      <img src="<%= coach.avatar_url %>" class="text-center">
       <li class="text-center"><%= coach.name %></li>
     <% end %>
   </ul>
