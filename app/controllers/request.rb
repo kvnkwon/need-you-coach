@@ -41,6 +41,16 @@ put '/request/:id' do
   end
 end
 
+# Coach unclaim a help request
+put '/request/:id/unclaim' do
+  user_request = Request.find_by(id: params[:id])
+  if current_user.is_admin?
+    user_request.update(coach_id: nil)
+  else
+    redirect('/')
+  end
+end
+
 # Delete a help request
 delete '/request/:id' do
   user_request = Request.find_by(id: params[:id])
