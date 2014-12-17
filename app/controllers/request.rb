@@ -33,12 +33,8 @@ end
 # Coach mark a help request
 put '/request/:id' do
   user_request = Request.find_by(id: params[:id])
-  if current_user.is_admin?
-    user_request.update(coach_id: current_user.id)
-    user_request.coach.to_json
-  else
-    redirect('/')
-  end
+  user_request.update(coach_id: current_user.id)
+  erb :'forms/_unclaim', layout: false, locals: {request: user_request}
 end
 
 # Coach unclaim a help request

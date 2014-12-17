@@ -12,10 +12,7 @@
           <% if request.coach_id.blank? && current_user && current_user.is_admin? %>
             <%= erb :'/forms/_help', locals: {request: request} %>
           <% elsif request.coach_id %>
-            - Coach <a href="/user/<%= request.coach_id %>"><%= request.coach.name %></a> is helping.
-            <% if request.coach == current_user %>
-              <%= erb :'/forms/_unclaim', locals: {request: request} %>
-            <% end %>
+            <%= erb :'/forms/_unclaim', locals: {request: request} %>
           <% end %>
         </div>
       </div>

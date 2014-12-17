@@ -1,4 +1,7 @@
-<form action="/request/<%= request.id %>/unclaim" method="POST" class="unclaim-form">
-  <input type="hidden" name="_method" value="PUT">
-  <input type="submit" class="link-button" value="Unclaim" />
-</form>
+- Coach <a href="/user/<%= request.coach_id %>"><%= request.coach.name %></a> is helping.
+<% if request.coach == current_user %>
+  <form action="/request/<%= request.id %>/unclaim" method="POST" class="unclaim-form">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" class="link-button" value="Unclaim" />
+  </form>
+<% end %>

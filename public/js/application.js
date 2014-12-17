@@ -5,11 +5,9 @@ $(document).ready(function() {
     var $target = $(event.target);
     $.ajax({
       type: "PUT",
-      url: $target.attr("action"),
-      dataType: "JSON"
+      url: $target.attr("action")
     }).done(function(response) {
-      console.log(response)
-      $target.html('- Coach <a href="/user/' + response.id + '">' + response.name + '</a> is helping.')
+      $target.parent().empty().append(response)
     })
   });
 
