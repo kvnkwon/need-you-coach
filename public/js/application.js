@@ -3,7 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     var $target = $(event.target);
     $.ajax({
-      type: "POST",
+      type: "PUT",
       url: $target.attr("action"),
       dataType: "JSON"
     }).done(function(response) {
