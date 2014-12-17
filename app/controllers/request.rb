@@ -44,8 +44,8 @@ end
 # Coach unclaim a help request
 put '/request/:id/unclaim' do
   user_request = Request.find(params[:id])
-  # user_request.update(coach_id: nil)
-  erb :'forms/_help', locals: {request: user_request}
+  user_request.update(coach_id: nil)
+  erb :'forms/_help', layout: false, locals: {request: user_request}
 end
 
 # Delete a help request
