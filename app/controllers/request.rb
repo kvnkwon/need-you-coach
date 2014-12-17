@@ -44,12 +44,8 @@ end
 # Coach unclaim a help request
 put '/request/:id/unclaim' do
   user_request = Request.find_by(id: params[:id])
-  if current_user.is_admin?
-    user_request.update(coach_id: nil)
-    erb :'forms/_unclaim', locals: {request: user_request}
-  else
-    redirect('/')
-  end
+  user_request.update(coach_id: nil)
+  erb :'forms/_help', locals: {request: user_request}
 end
 
 # Delete a help request
