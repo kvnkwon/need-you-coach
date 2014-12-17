@@ -18,7 +18,7 @@ $(document).ready(function() {
     var $target = $(event.target);
     $.ajax({
       type: "PUT",
-      url: $target.attr("action"),
+      url: $target.attr("action")
     }).done(function(response) {
       debugger;
       console.log(response)
