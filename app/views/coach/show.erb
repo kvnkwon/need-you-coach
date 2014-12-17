@@ -1,15 +1,15 @@
 <% unless @coaches.empty? %>
   <h2>Coaches on the Floor</h2>
   <% @coaches.each do |coach| %>
-    Coach <%= coach.name %><br>
+    <%= coach.name %><br>
   <% end %>
 <% else %>
   <h2>No coaches are available. Sorry!<h2>
 <% end %>
 
-<h2>All Coaches</h2>
+<h2>All Coaches and Mentors</h2>
 <% @all_coaches.each do |coach| %>
-  Coach <%= coach.name %><br>
+  <%= coach.name %><br>
 <% end %>
 
 <a href="/">Back to Help Requests</a>
