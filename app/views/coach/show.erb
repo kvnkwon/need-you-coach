@@ -8,14 +8,11 @@
     <% else %>
       <h2 class="text-center">No coaches are available. Sorry!<h2>
     <% end %>
+  <h2 class="text-center">All Coaches and Mentors</h2>
+  <ul class="small-block-grid-3">
+    <% @all_coaches.each do |coach| %>
+      <li><%= coach.name %></li></ul>
+    <% end %>
 </div>
 
-
-
-
-<h2>All Coaches and Mentors</h2>
-<% @all_coaches.each do |coach| %>
-  <%= coach.name %><br>
-<% end %>
-
-<a href="/">Back to Help Requests</a>
+<a href="/" class="text-center">Back to Help Requests</a>
