@@ -21,10 +21,7 @@ $(document).ready(function() {
       url: $target.attr("action"),
     }).done(function(response) {
       console.log(response)
-      $target.html('<form action="/request/<%= request.id %>" method="POST" class="help-form">
-              <input type="hidden" name="_method" value="PUT">
-              <input type="submit" class="link-button" value="Help" />
-            </form>')
+      $target.html(response)
     })
   });
 

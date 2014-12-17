@@ -46,6 +46,7 @@ put '/request/:id/unclaim' do
   user_request = Request.find_by(id: params[:id])
   if current_user.is_admin?
     user_request.update(coach_id: nil)
+    erb :'forms/unclaim'
   else
     redirect('/')
   end
