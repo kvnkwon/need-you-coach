@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.help-form').submit(function(event) {
+  $('.request-container').submit('.help-form', function(event) {
     event.preventDefault();
     var $target = $(event.target);
     $.ajax({
@@ -13,7 +13,7 @@ $(document).ready(function() {
     })
   });
 
-  $('.unclaim-form').submit(function(event) {
+  $('.request-container').submit('.unclaim-form', function(event) {
     event.preventDefault();
     var $target = $(event.target);
     $.ajax({
@@ -21,7 +21,7 @@ $(document).ready(function() {
       url: $target.attr("action")
     }).done(function(response) {
       console.log(response)
-      $target.html(response)
+      $target.parent().empty().append(response)
     })
   });
 
