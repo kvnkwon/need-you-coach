@@ -10,10 +10,12 @@
         </div>
         <div class="large-4 columns question-status">
           <% if request.coach_id.blank? && current_user && current_user.is_admin? %>
-            <%= erb :'/forms/help', locals: {request: request} %>
+            <%= erb :'/forms/_help', locals: {request: request} %>
           <% elsif request.coach_id %>
             - Coach <a href="/user/<%= request.coach_id %>"><%= request.coach.name %></a> is helping.
-            <%= erb :'/forms/unclaim', locals: {request: request} %>
+            <% if request.coach == current_user %>
+              <%= erb :'/forms/_unclaim', locals: {request: request} %>
+            <% end %>
           <% end %>
         </div>
       </div>
