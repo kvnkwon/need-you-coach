@@ -3,16 +3,19 @@
   <ul class="small-block-grid-3">
     <% unless @coaches.empty? %>
       <% @coaches.each do |coach| %>
-        <li><%= coach.name %></li></ul>
+        <li><%= coach.name %></li>
       <% end %>
+  </ul>
     <% else %>
       <h2 class="text-center">No coaches are available. Sorry!<h2>
     <% end %>
   <h2 class="text-center">All Coaches and Mentors</h2>
   <ul class="small-block-grid-3">
     <% @all_coaches.each do |coach| %>
-      <li><%= coach.name %></li></ul>
+      <li><%= coach.name %></li>
     <% end %>
+  </ul>
+  <a href="/" class="text-center">Back to Help Requests</a>
 </div>
 
-<a href="/" class="text-center">Back to Help Requests</a>
+
