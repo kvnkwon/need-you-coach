@@ -1,17 +1,19 @@
 <div class="small-6 small-centered columns">
-  <h3>Admins:</h3>
-  <div class="row">
-    <% @admins.each do |admin| %>
-      <div class="small-8 columns">
-        <a href="/user/<%= admin.id %>"><%= admin.name %></a><br>
-      </div>
-      <div class="small-4 columns">
-        <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
-          <input type="hidden" name="_method" value="PUT">
-          <input type="submit" class="link-button" value="Revoke Admin" />
-        </form>
-      </div>
-    <% end %>
+  <div class="panel">
+    <h3>Admins:</h3>
+    <div class="row">
+      <% @admins.each do |admin| %>
+        <div class="small-8 columns">
+          <a href="/user/<%= admin.id %>"><%= admin.name %></a><br>
+        </div>
+        <div class="small-4 columns">
+          <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
+            <input type="hidden" name="_method" value="PUT">
+            <input type="submit" class="link-button" value="Revoke Admin" />
+          </form>
+        </div>
+      <% end %>
+    </div>
   </div>
   <h3>Users:</h3>
   <div class="row">
