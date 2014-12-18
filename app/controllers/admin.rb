@@ -2,8 +2,8 @@
 get '/admin' do
   @coaches = User.where(checked_in: true)
   if current_user.is_admin?
-    @admins = User.where(is_admin: true)
-    @users = User.where(is_admin: false)
+    @admins = User.where(is_admin: true).sort_by{ |user| user.name }
+    @users = User.where(is_admin: false).sort_by{ |user| user.name }
     erb :'admin/index'
   else
     redirect('/')
