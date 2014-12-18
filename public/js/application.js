@@ -27,5 +27,5 @@ $(document).ready(function() {
 $('.request-container').ready(function() {
   setTimeout(function() {
     window.location.reload(1);
-  }, 10000);
+  }, 35000);
 })
