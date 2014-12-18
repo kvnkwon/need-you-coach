@@ -1,24 +1,22 @@
-<div id="new-request-modal">
-  <form action="/request/new" method="POST">
-    <%= display_error %>
-    <label>What phase are you in?</label>
-    <select name="request[phase]">
-      <option value = "1">1</option>
-      <option value = "2">2</option>
-      <option value = "3">3</option>
-   </select>
-    <label>I need help with:
-      <input type="text" name="request[title]" /><br>
-    </label>
-    <label>What do you think is happening?
-      <textarea type="text" name="request[problem_desc]" placeholder="Can you guess what might be happening with your code that is giving you a problem?"></textarea><br>
-    </label>
-    <label>What have you tried so far?
-      <textarea type="text" name="request[tried_desc]" placeholder="Google? Stack overflow? What have you tried with your code?"></textarea><br>
-    </label>
-    <label>Challenge URL:
-      <input type="text" name="request[url]" placeholder="OPTIONAL: Provide us the URL of the github challenge you are working on" /><br>
-    </label>
-    <button type="submit" class="button default" value="Submit">Help!</button>
-  </form>
-</div>
+<form action="/request/new" method="POST">
+  <%= display_error %>
+  <label>What phase are you in?</label>
+  <select name="request[phase]">
+    <option value = "1">1</option>
+    <option value = "2">2</option>
+    <option value = "3">3</option>
+ </select>
+  <label>I need help with:
+    <input type="text" name="request[title]" /><br>
+  </label>
+  <label>What do you think is happening?
+    <textarea type="text" name="request[problem_desc]" placeholder="Can you guess what might be happening with your code that is giving you a problem?"></textarea><br>
+  </label>
+  <label>What have you tried so far?
+    <textarea type="text" name="request[tried_desc]" placeholder="Google? Stack overflow? What have you tried with your code?"></textarea><br>
+  </label>
+  <label>Challenge URL:
+    <input type="text" name="request[url]" placeholder="OPTIONAL: Provide us the URL of the github challenge you are working on" /><br>
+  </label>
+  <button type="submit" class="button default" value="Submit">Help!</button>
+</form>
