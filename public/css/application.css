@@ -74,6 +74,6 @@ body {
   background-color: #EFE8D6;
 }
 
-.panel-header {
-  margin-bottom: 1em;
+.panel h2 {
+  margin-bottom: 1.625rem;
 }
