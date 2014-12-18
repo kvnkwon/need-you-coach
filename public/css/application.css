@@ -48,7 +48,7 @@ body {
 }
 
 .red-txt {
-  color: red;
+  color: #FA0000;
 }
 
 .coach-port-container {
@@ -76,4 +76,8 @@ body {
 
 .panel h2 {
   margin-bottom: 1.625rem;
+}
+
+.admin-panel-header {
+  color: #16C5A6;
 }

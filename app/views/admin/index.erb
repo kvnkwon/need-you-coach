@@ -1,6 +1,6 @@
 <div class="small-8 small-centered columns">
   <div class="panel admin-panel">
-    <h2>Admins</h2>
+    <h2 class="admin-panel-header">Admins</h2>
     <div class="row">
       <% @admins.each do |admin| %>
         <div class="small-8 columns">
@@ -11,12 +11,12 @@
         <div class="small-4 columns">
           <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
             <input type="hidden" name="_method" value="PUT">
-            <input type="submit" class="link-button" value="Revoke Admin" />
+            <input type="submit" class="link-button red-txt" value="Revoke Admin" />
           </form>
         </div>
       <% end %>
     </div>
-    <h2>Users</h2>
+    <h2 class="admin-panel-header">Users</h2>
     <div class="row">
       <% @users.each do |user| %>
         <div class="small-8 columns">
@@ -31,7 +31,7 @@
           </form>
           <form action="/user/<%= user.id %>" method="POST" class="admin-user-form">
             <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" class="link-button" value="Delete User" />
+            <input type="submit" class="link-button red-txt" value="Delete User" />
           </form>
         </div>
       <% end %>
