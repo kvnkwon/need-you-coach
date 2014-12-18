@@ -1,6 +1,6 @@
 <div class="small-8 small-centered columns">
   <div class="panel admin-panel">
-    <h3>Admins:</h3>
+    <h2 class="panel-header">Admins</h2>
     <div class="row">
       <% @admins.each do |admin| %>
         <div class="small-8 columns">
@@ -16,11 +16,13 @@
         </div>
       <% end %>
     </div>
-    <h3>Users:</h3>
+    <h2 class="panel-header">Users</h2>
     <div class="row">
       <% @users.each do |user| %>
         <div class="small-8 columns">
-          <a href="/user/<%= user.id %>"><%= user.name %></a><br>
+          <ul class="square">
+            <a href="/user/<%= user.id %>"><%= user.name %></a><br>
+          </ul>
         </div>
         <div class="small-4 columns">
           <form action="/user/<%= user.id %>/promote" method="POST" class="admin-user-form">
