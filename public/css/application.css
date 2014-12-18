@@ -9,7 +9,7 @@ h1, h2, h3, h4 {
 
  a {
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 900;
  }
 
 .link-button {
@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
   border: none;
   color: #FD7300;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 .nav-link-button {
