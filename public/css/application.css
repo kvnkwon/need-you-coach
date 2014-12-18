@@ -7,10 +7,17 @@ h1, h2, h3, h4 {
   font-weight: 900;
 }
 
+ a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+ }
+
 .link-button {
   background: none;
   border: none;
   color: #FD7300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 .nav-link-button {
