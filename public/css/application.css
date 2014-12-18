@@ -2,6 +2,11 @@ body {
   background: url(/img/retina_wood.png) repeat 0 0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
 .link-button {
   background: none;
   border: none;
