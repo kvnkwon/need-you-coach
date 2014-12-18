@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  document.title = $('.index-title')
+
   $('.request-container').on('submit', '.help-form', function(event) {
     event.preventDefault();
     var $target = $(event.target);
