@@ -51,6 +51,10 @@ body {
   color: #FA0000;
 }
 
+.light-blue-txt {
+  color: #2AE2DB;
+}
+
 .coach-port-container {
   margin-bottom: 0.5em;
 }
@@ -72,6 +76,7 @@ body {
   margin-top: 8em;
   margin-bottom: 8em;
   background-color: #EFE8D6;
+  background:rgba(255,255,255,0.5);
 }
 
 .panel h2 {
