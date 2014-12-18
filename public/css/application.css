@@ -7,13 +7,8 @@ h1, h2, h3, h4 {
   font-weight: 900;
 }
 
- a {
+ a, li {
   font-family: 'Open Sans', sans-serif !important;
- }
-
- .site-logo {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
  }
 
 .link-button {
