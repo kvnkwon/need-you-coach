@@ -108,3 +108,8 @@ h1, h2, h3, h4 {
 .admin-panel-header {
   color: #16C5A6 !important;
 }
+
+.help-button-index {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
