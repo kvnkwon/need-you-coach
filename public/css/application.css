@@ -23,8 +23,8 @@ h1, h2, h3, h4 {
   border: none;
   color: #FD7300;
 }
-.gray-background {
-  background-color: #FAFAFA;
+.tan-background {
+  background-color: #F0DEC4;
 }
 
 .purple-txt {
@@ -112,4 +112,5 @@ h1, h2, h3, h4 {
 .help-button-index {
   margin-top: 2em;
   margin-bottom: 2em;
+  display: inline-block;
 }
