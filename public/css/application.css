@@ -79,5 +79,5 @@ body {
 }
 
 .admin-panel-header {
-  color: #16C5A6;
+  color: #16C5A6 !important;
 }
