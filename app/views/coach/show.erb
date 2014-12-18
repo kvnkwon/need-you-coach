@@ -1,6 +1,6 @@
 <div class="small-8 small-centered columns">
   <h2 class="text-center available-h2">Who's Available?</h2>
-  <ul class="small-block-grid-3">
+  <ul class="small-block-grid-4">
     <% unless @coaches.empty? %>
       <% @coaches.each do |coach| %>
         <li class="text-center coach-port-container"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
@@ -10,7 +10,7 @@
       <h4 class="text-center coach-h2 red-txt">No coaches are available. Sorry!<h2>
     <% end %>
   <h2 class="text-center coach-h2">All Coaches and Mentors</h2>
-  <ul class="small-block-grid-3">
+  <ul class="small-block-grid-4">
     <% @all_coaches.each do |coach| %>
       <li class="text-center coach-port-container"><img src="<%= coach.avatar_url %>" class="text-center coach-portrait" width=150 height=150><br><%= coach.name %></li>
     <% end %>
