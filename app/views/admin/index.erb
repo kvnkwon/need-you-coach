@@ -1,10 +1,12 @@
-<div class="small-6 small-centered columns">
-  <div class="panel">
+<div class="small-8 small-centered columns">
+  <div class="panel admin-panel">
     <h3>Admins:</h3>
     <div class="row">
       <% @admins.each do |admin| %>
         <div class="small-8 columns">
-          <a href="/user/<%= admin.id %>"><%= admin.name %></a><br>
+          <ul class="square">
+            <li><a href="/user/<%= admin.id %>"><%= admin.name %></a></li>
+          </ul>
         </div>
         <div class="small-4 columns">
           <form action="/user/<%= admin.id %>/revoke" method="POST" class="revoke-form">
@@ -14,23 +16,23 @@
         </div>
       <% end %>
     </div>
-  </div>
-  <h3>Users:</h3>
-  <div class="row">
-    <% @users.each do |user| %>
-      <div class="small-8 columns">
-        <a href="/user/<%= user.id %>"><%= user.name %></a><br>
-      </div>
-      <div class="small-4 columns">
-        <form action="/user/<%= user.id %>/promote" method="POST" class="admin-user-form">
-          <input type="hidden" name="_method" value="PUT">
-          <input type="submit" class="link-button" value="Make Admin" />
-        </form>
-        <form action="/user/<%= user.id %>" method="POST" class="admin-user-form">
-          <input type="hidden" name="_method" value="DELETE">
-          <input type="submit" class="link-button" value="Delete User" />
-        </form>
-      </div>
-    <% end %>
+    <h3>Users:</h3>
+    <div class="row">
+      <% @users.each do |user| %>
+        <div class="small-8 columns">
+          <a href="/user/<%= user.id %>"><%= user.name %></a><br>
+        </div>
+        <div class="small-4 columns">
+          <form action="/user/<%= user.id %>/promote" method="POST" class="admin-user-form">
+            <input type="hidden" name="_method" value="PUT">
+            <input type="submit" class="link-button" value="Make Admin" />
+          </form>
+          <form action="/user/<%= user.id %>" method="POST" class="admin-user-form">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="link-button" value="Delete User" />
+          </form>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
