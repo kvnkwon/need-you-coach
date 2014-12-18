@@ -69,6 +69,14 @@ h1, h2, h3, h4 {
   color: #0FB531;
 }
 
+.greenish-txt{
+  color: #16C5A6;
+}
+
+.gray-txt {
+  color: #333333;
+}
+
 .coach-port-container {
   margin-bottom: 0.5em;
 }
