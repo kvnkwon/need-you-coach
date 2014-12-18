@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-  document.title = $('.index-title')
+  $title = $('.index-title')
+  if($title) {
+    document.title = $title.text()
+  }
 
   $('.request-container').on('submit', '.help-form', function(event) {
     event.preventDefault();
