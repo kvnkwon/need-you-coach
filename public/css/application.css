@@ -62,3 +62,8 @@ body {
 .top-bar-section li:not(.has-form) a:not(.button) {
   background: #16C5A6;
 }
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: #16C5A6;
+  background: #D8A965;
+}
