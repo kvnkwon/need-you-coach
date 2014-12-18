@@ -70,10 +70,10 @@ body {
 
 .admin-panel {
   margin-top: 8em;
+  margin-bottom: 8em;
   background-color: #EFE8D6;
 }
 
 .panel-header {
-  text-align: center;
   margin-bottom: 1em;
 }
