@@ -1,6 +1,6 @@
 <div class="small-10 small-centered columns">
   <div class="request-show">
-    <h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %> (P<%= @user_request.phase %>)</a> needs help with: <%= h @user_request.title %></h2>
+    <h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %> (P<%= @user_request.phase %>)</a> needs help with: <span class="red-txt"><%= h @user_request.title %></span></h2>
     <% if @user_request.url? %>
       <p>Challenge URL: <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
     <% end %>
