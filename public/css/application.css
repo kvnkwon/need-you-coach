@@ -7,7 +7,7 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
- a, li {
+ a, li, p {
   font-family: 'Open Sans', sans-serif !important;
  }
 
@@ -99,8 +99,8 @@ label {
 }
 
 .admin-panel {
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   background-color: #EFE8D6;
   background:rgba(255,255,255,0.5);
 }
@@ -122,4 +122,11 @@ label {
 .request-form {
   margin-top: 3em;
   margin-bottom: 3em;
+}
+
+.request-show {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-color: #EFE8D6;
+  background:rgba(255,255,255,0.5);
 }

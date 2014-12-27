@@ -1,18 +1,20 @@
-<div class="small-12 small-centered columns">
-  <h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %> (P<%= @user_request.phase %>)</a> needs help with: <%= h @user_request.title %></h2>
-  <% if @user_request.url? %>
-    <p>Challenge URL: <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
-  <% end %>
-  <p>What I think is happening:<br> <%= h @user_request.problem_desc %></p>
-  <p>What I tried:<br> <%= h @user_request.tried_desc %></p><br>
-  <% if current_user %>
-    <% if current_user == @user_request.student || current_user.is_admin? %>
-      <form action='/request/<%= @user_request.id %>' method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" class="button alert small radius" value="Submit">Close Help Request</button>
-      </form>
+<div class="small-10 small-centered columns">
+  <div class="request-show">
+    <h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %> (P<%= @user_request.phase %>)</a> needs help with: <%= h @user_request.title %></h2>
+    <% if @user_request.url? %>
+      <p>Challenge URL: <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
     <% end %>
-  <% end %>
+    <p>What I think is happening:<br> <%= h @user_request.problem_desc %></p>
+    <p>What I tried:<br> <%= h @user_request.tried_desc %></p><br>
+    <% if current_user %>
+      <% if current_user == @user_request.student || current_user.is_admin? %>
+        <form action='/request/<%= @user_request.id %>' method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="button alert small radius" value="Submit">Close Help Request</button>
+        </form>
+      <% end %>
+    <% end %>
 
-  <a href="/">Back to Help Requests</a>
+    <a href="/">Back to Help Requests</a>
+  </div>
 </div>
