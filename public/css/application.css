@@ -11,6 +11,10 @@ h1, h2, h3, h4 {
   font-family: 'Open Sans', sans-serif !important;
  }
 
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
 .link-button {
   background: none;
   border: none;
@@ -118,6 +122,4 @@ h1, h2, h3, h4 {
 .request-form {
   margin-top: 3em;
   margin-bottom: 3em;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem !important;
 }
