@@ -144,3 +144,7 @@ label, p {
   background-color: #EFE8D6;
   background:rgba(255,255,255,0.5);
 }
+
+.index-link {
+  margin-top: 3em;
+}
