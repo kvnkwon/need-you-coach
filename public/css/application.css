@@ -114,3 +114,8 @@ h1, h2, h3, h4 {
   margin-bottom: 2em;
   display: inline-block;
 }
+
+.request-form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
