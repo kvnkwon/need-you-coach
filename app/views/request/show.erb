@@ -4,8 +4,8 @@
     <% if @user_request.url? %>
       <p>Challenge URL: <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
     <% end %>
-    <p>What I think is happening:<br> <%= h @user_request.problem_desc %></p>
-    <p>What I tried:<br> <%= h @user_request.tried_desc %></p><br>
+    <p>What I think is happening:<br> <span class="blue-txt"><%= h @user_request.problem_desc %></span></p>
+    <p>What I tried:<br> <span class="blue-txt"><%= h @user_request.tried_desc %></span></p><br>
     <% if current_user %>
       <% if current_user == @user_request.student || current_user.is_admin? %>
         <form action='/request/<%= @user_request.id %>' method="POST">

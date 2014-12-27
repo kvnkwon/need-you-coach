@@ -7,11 +7,11 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
- a, li, p {
+ a, li {
   font-family: 'Open Sans', sans-serif !important;
  }
 
-label {
+label, p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
 }
@@ -67,6 +67,10 @@ label {
 
 .light-blue-txt {
   color: #2AE2DB;
+}
+
+.blue-txt {
+  color: #2292FF;
 }
 
 .green-txt {
@@ -125,6 +129,7 @@ label {
 }
 
 .request-show {
+  padding: 2em;
   margin-top: 3em;
   margin-bottom: 3em;
   background-color: #EFE8D6;
