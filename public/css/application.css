@@ -70,7 +70,7 @@ label, p {
 }
 
 .blue-txt {
-  color: #2292FF;
+  color: #2292FF !important;
 }
 
 .green-txt {

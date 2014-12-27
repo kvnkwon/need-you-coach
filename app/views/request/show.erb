@@ -2,7 +2,7 @@
   <div class="request-show">
     <h2><a href="/user/<%= @user_request.student_id %>"><%= @user_request.student.name %> (P<%= @user_request.phase %>)</a> needs help with: <span class="red-txt"><%= h @user_request.title %></span></h2>
     <% if @user_request.url? %>
-      <p>Challenge URL: <a href="<%= h @user_request.url %>"><%= h @user_request.url %></a></p>
+      <p>Challenge URL: <a href="<%= h @user_request.url %>"><span class="blue-txt"><%= h @user_request.url %></span></a></p>
     <% end %>
     <p>What I think is happening:<br> <span class="blue-txt"><%= h @user_request.problem_desc %></span></p>
     <p>What I tried:<br> <span class="blue-txt"><%= h @user_request.tried_desc %></span></p><br>
