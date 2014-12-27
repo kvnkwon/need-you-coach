@@ -61,6 +61,11 @@ label, p {
   margin-bottom: 0.5em;
 }
 
+.prof-pic {
+  border-radius: 15px;
+  display: inline-block;
+}
+
 .red-txt {
   color: #FA0000;
 }
@@ -126,6 +131,10 @@ label, p {
 .request-form {
   margin-top: 3em;
   margin-bottom: 3em;
+}
+
+.user-profile {
+  margin-top: 3em;
 }
 
 .request-show {

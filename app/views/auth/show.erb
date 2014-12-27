@@ -1,3 +1,7 @@
-<img src="<%= @user.avatar_url %>" height="230" width="230">
-<h2><%= @user.name %></h2>
-<%= @user.email %>
+<div class="small-6 small-centered columns">
+  <div class="user-profile text-center">
+    <img src="<%= @user.avatar_url %>" height="230" width="230" class="prof-pic">
+    <h2><%= @user.name %></h2>
+    <p><%= @user.email %><p>
+  </div>
+</div>
